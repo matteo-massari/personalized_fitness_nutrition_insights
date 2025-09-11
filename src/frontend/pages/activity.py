@@ -5,6 +5,7 @@ from datetime import datetime, date, time as dtime, timezone, timedelta
 from zoneinfo import ZoneInfo
 import time as _time
 import streamlit as st
+from datetime import date
 
 from utility import database_connection as db
 from frontend_utility import ui  # sidebar + header + css comuni
@@ -384,16 +385,16 @@ with main_col:
             if not options:
                 st.info("Non ci sono attività disponibili.")
             else:
-                qc1, qc2, qc3 = st.columns([1, 1, 1])
+                qc1, qc2 = st.columns([1, 1])
                 with qc1:
-                    quick_day: date = st.date_input("Data (rapida)", value=date.today(), format="YYYY-MM-DD", key="quick_day")
+                    duration_min = st.number_input("Durata (min)", min_value=1, max_value=600, step=5, value=30,
+                                                   key="quick_dur")
                 with qc2:
                     anchor = st.selectbox("Ancoraggio", ["🕒 Finita ora"], index=0, key="quick_anchor")
-                with qc3:
-                    duration_min = st.number_input("Durata (min)", min_value=1, max_value=600, step=5, value=30, key="quick_dur")
 
-                # Ora locale corrente (min granularity)
+                # Ora locale 
                 now_local = _now_local(DEFAULT_TZ).time()
+                quick_day = date.today()
 
                 # Griglia attività
                 cols = st.columns(3)

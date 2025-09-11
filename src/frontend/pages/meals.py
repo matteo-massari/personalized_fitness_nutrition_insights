@@ -681,7 +681,7 @@ with main_col:
                     else:
                         # lookup preciso su DB
                         if meta["source"] == "personalized":
-                            food = db.get_personalized_food(user_id, meta["name"])
+                            food = db.get_personalized_food_by_name(user_id, meta["name"])
                         else:
                             food = db.get_food(meta["name"])
 

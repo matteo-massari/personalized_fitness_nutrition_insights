@@ -261,12 +261,10 @@ with main_col:
             if show_hr and "hr_bpm_smooth" in facts_day.columns:
                 st.markdown("#### Andamento HR (giornata)")
                 st.line_chart(facts_day[["hr_bpm_smooth"]], use_container_width=True)
-                st.caption("Serie minuto/minuto (media mobile 5'). Orari in UTC.")
 
             if show_spo2 and "spo2_smooth" in facts_day.columns:
                 st.markdown("#### SpO₂ (giornata)")
                 st.line_chart(facts_day[["spo2_smooth"]], use_container_width=True)
-                st.caption("Serie minuto/minuto (media mobile 5'). Orari in UTC.")
 
     elif gran == "Mese":
         # Selettore mese: usiamo una data qualsiasi del mese scelto
