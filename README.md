@@ -224,10 +224,10 @@ The system supports both cardio and strength training, team and individual sport
 
 The "Daily Tips" section offers personalized recommendations based on your data and goals:
 
-- **Recommended Workout**: Specific suggestions for physical activity 
-- **Recommended Nutrition Plan**: Personalized dietary advice 
-- **Feedback System**: "Like" 👍 and "Dislike" 👎 buttons to refine future recommendations  
-- **Continuous Personalization**: The system learns from your preferences to improve suggestions over time  
+- **Recommended Workout**: Specific suggestions for physical activity.
+- **Recommended Nutrition Plan**: Personalized dietary advice.
+- **Feedback System**: "Like" 👍 and "Dislike" 👎 buttons to refine future recommendations.  
+- **Continuous Personalization**: The system learns from your preferences to improve suggestions over time.  
 
 This intelligent recommendation system aims to help maintain motivation and optimize results on your fitness journey.
 
